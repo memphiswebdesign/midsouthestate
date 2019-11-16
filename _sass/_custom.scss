@@ -14,22 +14,24 @@
     border: 1px solid #ddd;
     padding: 2px;
     cursor: zoom-in;
+    transition: all 0.2s ease-out;
 
     @media(min-width: 730px) {flex-basis: 31%;}
     @media(min-width: 992px) {
       flex-basis: 24%;
       margin: 0 0 1% 0;
     }
-    @media(min-width: 1190px) {flex-basis: 19%;}
+    @media(min-width: 1190px) {flex-basis: 19%;} 
 
     
         @media(min-width: 768px) {
           &:hover {
             border-color: #007bff;
+            box-shadow: 0 0 0 2px #007bff, 0 2px 4px -1px rgba(#222, 0.3);
             img {
-              opacity: 0.7;
+              opacity: 0.8;
               transform: scale(1.04);
-              transition: all 0.72s ease-out;
+              transition: all 0.4s ease-out;
             }
             figure {
               transform: translateY(0);
@@ -88,16 +90,25 @@ header#main {
   background-color: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: 0 4px 12px -6px rgba(#333, 0.1);
-  padding: 12px 0;
+  padding: 18px 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
 
-  nav {}
+  nav {
+    @media(max-width: 500px) {
+      flex-direction: column;
+    }
+  }
   .logo {
-    width: 130px;
+    width: 230px;
+    margin-right: 18px;
+
+    @media(max-width: 500px) {
+      margin: 6px 0 18px 0;
+    }
     a {
       display: inline-block;
       &:hover {opacity: 0.75;}
@@ -108,6 +119,13 @@ header#main {
     }
   }
   .contact-cta {
+    align-items: center;
+
+    @media(max-width: 767px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     a.btn {
       margin: 0 6px;
     }
@@ -115,6 +133,7 @@ header#main {
     .micro-text {
       font-size: 0.9rem;
       margin: 3px 0;
+      @media(min-width: 768px) {display: none;}
     }
   }
 }
@@ -122,7 +141,11 @@ header#main {
 .fixed-header-space {
   position: relative;
   top: 0;
-  height: 116px;
+  height: 95px;
+
+  @media(max-width: 500px) {
+    height: 224px;
+  }
 }
 
 main {
@@ -132,8 +155,8 @@ main {
 section#hero {
   position: relative;
   overflow: hidden;
-  height: 48vh;
-  min-height: 370px;
+  height: 55vh;
+  min-height: 380px;
   background-color: #ddd;
 
   .center-message {
@@ -149,18 +172,21 @@ section#hero {
     z-index: 10;
     width: 94%;
 
-    h1 {
-      font-size: 1.55rem; font-weight: bold;
-      &:after {
-        content: '';
-        display: block;
-        margin: $spacing-unit / 1.8 auto;
-        height: 2px;
-        width: 33%;
-        background-color: #fff;
-      }
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
-    h2 {font-size: 1.4rem;}
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      @media(min-width: 768px) {font-size: 1.55rem;}
+    }
+    h2 {
+      font-size: 1rem;
+      margin: 1.4em 0;
+      @media(min-width: 768px) {font-size: 1.33rem;}
+    }
     p {margin: 0;}
   }
 }
