@@ -1,12 +1,12 @@
 # Site settings
 title: Mid South Estate | Commercial Listings
-email: elibrumley@gmail.com
+email: sales@midsouthestate.com
 description: > # this means to ignore newlines until "baseurl:"
-  Commercial Listings in the mid-south and greater Memphis area.
+  Commercial Listings in the Mid-South and greater Memphis area.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://midsouthestate.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
-# Build settings
+# Build settings 
 markdown: kramdown
