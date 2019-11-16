@@ -1230,6 +1230,9 @@ header#main {
       height: auto; }
   header#main .contact-cta a.btn {
     margin: 0 6px; }
+  header#main .contact-cta .micro-text {
+    font-size: 0.9rem;
+    margin: 3px 0; }
 
 .fixed-header-space {
   position: relative;
